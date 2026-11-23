@@ -1,0 +1,12 @@
+{
+  "name": "Vandad's New Year's Masquerade",
+  "short_name": "Masquerade",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0c1526",
+  "theme_color": "#0c1526",
+  "icons": [
+    { "src": "https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/f4982233-617a-4acd-bc80-797b1a2fd713.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/ffb2e7aa-7551-432a-bac0-ccfea0ea7280.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
