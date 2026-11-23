@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vandad's Masquerade</title>
-<meta name="description" content="A masked New Year's Eve ball. Thursday, December 31, from 8 pm. Reply inside.">
+<meta name="description" content="New Year's Eve masquerade. Dec 31. Masks on till midnight. RSVP inside.">
 <meta name="theme-color" content="#0c1526">
-<meta property="og:title" content="Vandad's Masquerade">
-<meta property="og:description" content="A masked New Year's Eve ball. Thursday, December 31, from 8 pm. Reply inside.">
+<meta property="og:title" content="Vandad's New Year's Masquerade">
+<meta property="og:description" content="Dec 31. Masks on till midnight. RSVP inside.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/hf_20261123_221414_4b17e325-b36a-4f33-a4b0-1c939e58cb51.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,165 +18,185 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://d2ol7oe51mr4n9.cloudfront.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/84ad4383-14d0-452a-8433-9482a2bbb363.jpg" media="(max-width: 860px)">
+<link rel="preload" as="image" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/03c169ea-0042-4213-a3b4-cec1ab91cc7b.jpg" media="(min-width: 861px)">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main class="mq">
+<main>
 
-  <section class="journey" id="top" aria-label="The invitation">
+  <section class="journey" id="top" aria-label="The invite">
     <div class="stage" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 860px)" srcset="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/84ad4383-14d0-452a-8433-9482a2bbb363.jpg">
+        <img class="stage__poster" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/03c169ea-0042-4213-a3b4-cec1ab91cc7b.jpg" alt="" fetchpriority="high">
+      </picture>
       <video id="film" muted playsinline preload="none"
-        poster="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/8c58aebc-ae09-4451-a94d-d3151ed168aa.jpg"
-        data-desktop="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/1501dc38-7995-4f08-8c57-1357f528b521.mp4"
-        data-mobile="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/3885399f-66ff-404e-920c-6e7e653f7747.mp4"
-        data-mobile-poster="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/99965a4c-16aa-4fdf-8fc0-73a2e90704b0.jpg"></video>
+        data-desktop="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/119d341a-b48d-475d-b507-2315f2f107b7.mp4"
+        data-phone="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/2f8669da-9e18-43f0-9e69-aed3ca2898c7.mp4"></video>
       <div class="progress"><span id="progress-bar"></span></div>
     </div>
 
-    <nav class="chapters" aria-label="Chapters">
-      <button type="button" data-go="0" aria-current="step">Invitation</button>
-      <button type="button" data-go="1">The night</button>
-      <button type="button" data-go="2">Masks on</button>
-      <button type="button" data-go="3">Midnight</button>
-      <a class="chapters__reply" href="#reply">Reply</a>
-    </nav>
+    <div class="topbar">
+      <button class="sound" id="sound" type="button" aria-pressed="false">
+        <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="sound__label">Sound off</span>
+      </button>
+      <nav class="chapters" aria-label="Chapters">
+        <button type="button" data-go="0" aria-current="step">Invite</button>
+        <button type="button" data-go="1">When</button>
+        <button type="button" data-go="2">Dress</button>
+        <button type="button" data-go="3">Midnight</button>
+      </nav>
+      <a class="topbar__rsvp" href="#rsvp">RSVP</a>
+    </div>
+    <audio id="track" loop preload="none" src="https://d8j0ntlcm91z4.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/hf_20261123_225751_f1b083b8-d0e0-44ec-9337-8a12aec3c431.mp3"></audio>
 
     <div class="story">
-      <article class="chapter" id="invitation">
+      <article class="chapter" id="invite">
         <div class="pin"><div class="copy">
           <h1 class="title">
             <span class="title__line">Vandad's</span>
             <small class="aside">(also Rachel and Allie, I guess)</small>
             <span class="title__line">New Year's Masquerade</span>
           </h1>
-          <p class="body">A masked ball to see out 2026. Arrive in disguise, leave in 2027.</p>
-          <div class="actions"><a class="cta-reply" href="#reply">Reply now <span aria-hidden="true">→</span></a></div>
+          <p class="body">Dec 31. Masks on till midnight.</p>
+          <div class="actions"><a class="cta" href="#rsvp">RSVP <span aria-hidden="true">→</span></a></div>
         </div></div>
       </article>
 
-      <article class="chapter" id="the-night" data-align="right">
+      <article class="chapter" id="when" data-align="right">
         <div class="pin"><div class="copy">
-          <h2 class="title">Thursday, December 31</h2>
-          <p class="body">Doors open at 8 pm. The address goes out privately once you reply.</p>
-          <ul class="tags"><li>8 pm until late</li><li>Address after you reply</li></ul>
+          <h2 class="title">Dec 31, 9 PM</h2>
+          <p class="body">The location drops on Dec 30, and only to people who RSVP'd.</p>
+          <ul class="tags"><li>9 PM till late</li><li>Location drops Dec 30</li></ul>
         </div></div>
       </article>
 
-      <article class="chapter" id="masks-on">
+      <article class="chapter" id="dress">
         <div class="pin"><div class="copy">
-          <h2 class="title">Come masked</h2>
-          <p class="body">Black tie or your most dramatic evening wear. Masks stay on until midnight, so pick one you can dance in.</p>
-          <ul class="tags"><li>Black tie</li><li>Masks required</li></ul>
+          <h2 class="title">Mask on</h2>
+          <p class="body">Dress up. The mask is mandatory, everything else is up to you.</p>
+          <div class="actions"><a class="link" href="https://www.amazon.ca/s?k=masquerade+mask" target="_blank" rel="noreferrer">Need a mask?</a></div>
         </div></div>
       </article>
 
       <article class="chapter" id="midnight" data-align="right">
         <div class="pin"><div class="copy">
-          <h2 class="title">The unmasking</h2>
-          <p class="body">When the clock strikes twelve, every mask comes off and 2027 begins.</p>
+          <h2 class="title">Masks off at midnight</h2>
           <div class="actions">
             <div class="count" id="countdown" role="timer" aria-label="Time until midnight on New Year's Eve">
               <div><span class="count__num" data-unit="d">--</span><span class="count__label">days</span></div>
-              <div><span class="count__num" data-unit="h">--</span><span class="count__label">hours</span></div>
-              <div><span class="count__num" data-unit="m">--</span><span class="count__label">minutes</span></div>
-              <div><span class="count__num" data-unit="s">--</span><span class="count__label">seconds</span></div>
+              <div><span class="count__num" data-unit="h">--</span><span class="count__label">hrs</span></div>
+              <div><span class="count__num" data-unit="m">--</span><span class="count__label">min</span></div>
+              <div><span class="count__num" data-unit="s">--</span><span class="count__label">sec</span></div>
             </div>
-            <p class="count-done" id="count-done" hidden>Happy New Year. The masks are off.</p>
+            <p class="count-done" id="count-done" hidden>Happy New Year. Masks off.</p>
           </div>
         </div></div>
       </article>
     </div>
   </section>
 
-  <section class="evening" id="evening" aria-labelledby="evening-title">
-    <div class="wrap evening__grid">
-      <div class="evening__copy">
-        <h2 class="h2" id="evening-title">The evening</h2>
-        <p class="lede">One night, six moments. Masks on for all but the last two.</p>
-        <ol class="plan">
-          <li><time>8:00 pm</time><div><h3>Doors and champagne</h3><p>Arrive masked. A glass is waiting at the door.</p></div></li>
-          <li><time>9:00 pm</time><div><h3>Dinner by candlelight</h3><p>A long table, good wine, and strangers who may not be strangers.</p></div></li>
-          <li><time>10:30 pm</time><div><h3>The ballroom opens</h3><p>Music up, lights down. Dance until the bells.</p></div></li>
-          <li><time>11:45 pm</time><div><h3>Gather for the countdown</h3><p>Glasses filled, everyone together.</p></div></li>
-          <li><time>12:00 am</time><div><h3>The unmasking</h3><p>Masks off at the stroke of midnight. Hello, 2027.</p></div></li>
-          <li><time>1:00 am</time><div><h3>After hours</h3><p>Dessert, coffee and whatever the night has left.</p></div></li>
-        </ol>
-        <p class="note">Timings are a sample plan and may shift on the night.</p>
-      </div>
-      <figure class="evening__figure">
-        <img class="evening__img" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/cf64e7bb-3441-4788-9dcf-376fe9259832.webp" alt="Masked couples waltzing in a moonlit ballroom" loading="lazy" decoding="async">
-        <figcaption>
-          <p class="figcap">Thursday, December 31, from 8 pm until late.</p>
-          <div class="cal">
-            <button class="cal-btn" type="button" id="ics">Add to calendar</button>
-            <a class="cal-link" id="gcal" href="#" target="_blank" rel="noreferrer">Google Calendar</a>
-          </div>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+  <section class="rsvp" id="rsvp" aria-labelledby="rsvp-title">
+    <div class="wrap">
+      <div class="rsvp__grid">
+        <div class="panel">
+          <h2 class="h2" id="rsvp-title">You in?</h2>
 
-  <section class="reply" id="reply" aria-labelledby="reply-title">
-    <div class="wrap reply__grid">
-      <div class="reply__copy">
-        <h2 class="h2" id="reply-title">Kindly reply</h2>
-        <p class="lede">By December 15, so Vandad can count the champagne.</p>
-        <p class="headcount" id="headcount" aria-live="polite">Counting masks...</p>
-        <p class="note">Replied already? Send it again under the same name and it updates your answer.</p>
-      </div>
-
-      <div class="panel">
-        <form class="form" id="rsvp" novalidate>
-          <div class="field">
-            <label for="rsvp-name">Your name</label>
-            <input type="text" id="rsvp-name" autocomplete="name" maxlength="80">
-            <p class="error" id="name-error" hidden>Please add your name so Vandad knows who's behind the mask.</p>
-          </div>
-          <fieldset class="field">
-            <legend>Your answer</legend>
-            <div class="choice">
-              <label><input type="radio" name="attending" id="rsvp-yes" value="yes" checked><span>Joyfully accepts</span></label>
-              <label><input type="radio" name="attending" id="rsvp-no" value="no"><span>Regretfully declines</span></label>
+          <form class="form" id="form" novalidate>
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" autocomplete="name" maxlength="60" enterkeyhint="next">
+              <p class="error" id="name-error" hidden>Add your name first.</p>
             </div>
-          </fieldset>
-          <div class="field" id="party-field">
-            <label for="rsvp-party">How many masks, including you?</label>
-            <select id="rsvp-party">
-              <option value="1">Just me</option>
-              <option value="2">2 people</option>
-              <option value="3">3 people</option>
-              <option value="4">4 people</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="rsvp-note">A note for Vandad (optional)</label>
-            <textarea id="rsvp-note" rows="3" maxlength="500" placeholder="Dietary needs, a song for the dance floor"></textarea>
-          </div>
-          <div class="trap" aria-hidden="true">
-            <label for="rsvp-website">Leave this empty</label>
-            <input type="text" id="rsvp-website" tabindex="-1" autocomplete="off">
-          </div>
-          <button class="send" type="submit" id="send">Send reply</button>
-          <p class="error" id="send-error" role="alert" hidden></p>
-        </form>
 
-        <div class="done" id="done" role="status" hidden>
-          <h3 class="done__title" id="done-title"></h3>
-          <p id="done-body"></p>
-          <button class="again" type="button" id="again">Change my reply</button>
+            <fieldset class="field">
+              <legend>Coming?</legend>
+              <div class="seg">
+                <label><input type="radio" name="status" value="going" checked><span>Going</span></label>
+                <label><input type="radio" name="status" value="maybe"><span>Maybe</span></label>
+                <label><input type="radio" name="status" value="no"><span>Can't</span></label>
+              </div>
+            </fieldset>
+
+            <label class="toggle" id="plus-wrap">
+              <input type="checkbox" id="f-plus">
+              <span class="toggle__ui" aria-hidden="true"></span>
+              <span>Bringing a +1</span>
+            </label>
+
+            <div class="field">
+              <label for="f-song">Song you need to hear <span class="opt">optional</span></label>
+              <input type="text" id="f-song" maxlength="80" placeholder="Artist, song" enterkeyhint="next">
+            </div>
+
+            <div class="field">
+              <label for="f-msg">Say something on the wall <span class="opt">optional</span></label>
+              <input type="text" id="f-msg" maxlength="140" enterkeyhint="send">
+            </div>
+
+            <label class="check">
+              <input type="checkbox" id="f-show" checked>
+              <span>Show my first name on the guest list</span>
+            </label>
+
+            <div class="trap" aria-hidden="true">
+              <label for="f-website">Leave empty</label>
+              <input type="text" id="f-website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="send" type="submit" id="send">Send RSVP</button>
+            <p class="error" id="send-error" role="alert" hidden></p>
+          </form>
+
+          <div class="done" id="done" hidden>
+            <h3 class="done__title" id="done-title"></h3>
+            <p class="done__body" id="done-body"></p>
+            <div class="storycard" id="storycard" hidden>
+              <canvas id="story-canvas" width="1080" height="1920" aria-label="Your story card"></canvas>
+              <div class="storycard__actions">
+                <button class="share" type="button" id="share-story">Share to story</button>
+                <button class="link" type="button" id="save-story">Save image</button>
+              </div>
+            </div>
+            <div class="done__more">
+              <button class="link" type="button" id="ics">Add to calendar</button>
+              <button class="link" type="button" id="again">Change my RSVP</button>
+            </div>
+          </div>
         </div>
+
+        <aside class="board" aria-label="Who's coming">
+          <div class="board__head">
+            <p class="big" id="going-count">0</p>
+            <p class="board__label">going<span id="maybe-line"></span></p>
+          </div>
+          <ul class="names" id="names"><li class="names__empty">Nobody yet. Be first.</li></ul>
+        </aside>
+      </div>
+
+      <div class="lists">
+        <section class="list" aria-labelledby="songs-title">
+          <h2 class="h3" id="songs-title">The queue</h2>
+          <ol class="songs" id="songs"><li class="empty">Add a song with your RSVP.</li></ol>
+        </section>
+        <section class="list" aria-labelledby="wall-title">
+          <h2 class="h3" id="wall-title">The wall</h2>
+          <ul class="wall" id="wall"><li class="empty">Quiet so far.</li></ul>
+        </section>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <img class="footer__mark" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/f4982233-617a-4acd-bc80-797b1a2fd713.png" alt="" width="56" height="56">
+    <img class="footer__mark" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3MFXqTdGHcWunJwCMEhC2qSMfGA/f4982233-617a-4acd-bc80-797b1a2fd713.png" alt="" width="44" height="44" loading="lazy">
     <p class="footer__host">Hosted by Vandad</p>
     <p class="footer__aside">(and Rachel and Allie, apparently)</p>
-    <p class="footer__small">December 31, 2026. Questions? Message Vandad directly.</p>
   </footer>
 
+  <a class="float-rsvp" id="float-rsvp" href="#rsvp">RSVP</a>
 </main>
 <script src="config.js"></script>
 <script src="app.js"></script>
